@@ -1,0 +1,14 @@
+{
+  "name": "Python 3.14 & Claude Code DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/python:3.14",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "containerEnv": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "AWS_REGION": "us-east-1"
+  },
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code"
+}
