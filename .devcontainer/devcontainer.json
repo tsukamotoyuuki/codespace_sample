@@ -4,11 +4,13 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
-    }
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   },
   "containerEnv": {
     "CLAUDE_CODE_USE_BEDROCK": "1",
-    "AWS_REGION": "us-east-1"
+    "AWS_REGION": "us-east-1",
+    "ANTHROPIC_MODEL": "us.anthropic.claude-sonnet-4-6"
   },
-  "postCreateCommand": "npm install -g @anthropic-ai/claude-code"
+  "postCreateCommand": "claude --version"
 }
